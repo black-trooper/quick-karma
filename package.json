@@ -1,0 +1,53 @@
+{
+	"name": "quick-karma",
+	"displayName": "Quick Karma",
+	"description": "Run your only single Karma test quickly in Visual Studio Code.",
+	"version": "0.1.0",
+	"publisher": "black-trooper",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/black-trooper/quick-karma.git"
+	},
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.quick-karma.run"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.quick-karma.run",
+				"title": "Quick Karma",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"esprima": "^4.0.1"
+	},
+	"devDependencies": {
+		"@types/esprima": "^4.0.2",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.39.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	}
+}
