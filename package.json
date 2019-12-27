@@ -2,7 +2,7 @@
 	"name": "quick-karma",
 	"displayName": "Quick Karma",
 	"description": "Run your only single Karma test quickly in Visual Studio Code.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "black-trooper",
 	"license": "MIT",
 	"repository": {
